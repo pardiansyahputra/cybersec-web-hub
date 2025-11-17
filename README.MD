@@ -1,5 +1,6 @@
 # 🛡️ CyberSec Hub - Cybersecurity Knowledge Platform
-
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]
+[![Docker](https://img.shields.io/badge/Docker-Container-blue.svg)](https://docker.com)
 A full-stack web application for sharing cybersecurity articles, tips, and tools. Built with modern technologies and containerized with Docker.
 
 ## 📸 Screenshots
