@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Hub - Cybersecurity Knowledge Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🛡️ CyberSec Hub</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">Cybersecurity Knowledge Platform</div>
+                    <h1>Secure Your Digital Future</h1>
+                    <p>Expert insights, practical guides, and cutting-edge research to help you navigate the complex
+                        world of cybersecurity.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" onclick="showAddArticleForm()">
+                            <span>✍️ Write Article</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="loadArticles()">
+                            <span>📚 Browse Articles</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Articles Section -->
+            <section class="articles-section" id="articles">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Security Insights</h2>
+                        <p class="section-subtitle">Latest articles from cybersecurity experts</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="showAddArticleForm()">
+                        <span>+ New Article</span>
+                    </button>
+                </div>
+
+                <!-- Add Article Form -->
+                <div id="addArticleForm" class="add-article-form" style="display: none;">
+                    <h4>Share Your Knowledge</h4>
+                    <form id="articleForm">
+                        <div class="form-group">
+                            <label for="title">Article Title</label>
+                            <input type="text" id="title" name="title" required
+                                placeholder="Enter a compelling title...">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content</label>
+                            <textarea id="content" name="content" rows="6" required
+                                placeholder="Share your cybersecurity insights and expertise..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Publish Article</button>
+                            <button type="button" class="btn btn-secondary"
+                                onclick="hideAddArticleForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading security insights...</p>
+                </div>
+
+                <!-- Articles List -->
+                <div id="articlesList" class="articles-grid"></div>
+
+                <!-- Empty State -->
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">📝</div>
+                    <h4>No Articles Yet</h4>
+                    <p>Be the first to share cybersecurity knowledge with the community.</p>
+                    <button class="btn btn-primary" onclick="showAddArticleForm()">
+                        <span>Write First Article</span>
+                    </button>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" class="error-state" style="display: none;">
+                    <div class="error-state-icon">⚠️</div>
+                    <h4>Connection Issue</h4>
+                    <p>Unable to load articles. Please check your connection.</p>
+                    <button class="btn btn-secondary" onclick="loadArticles()">
+                        <span>Try Again</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 CyberSec Hub. Building a safer digital world.</p>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li><a href="#terms">Terms</a></li>
+                    <li><a href="#security">Security</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Full Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <button class="close-modal" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent" class="modal-content-text"></div>
+            </div>
+            <div class="modal-footer">
+                <span id="modalDate"></span>
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
