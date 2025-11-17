@@ -47,7 +47,7 @@ A full-stack web application for sharing cybersecurity articles, tips, and tools
 - MongoDB data persistence
 
 ## 📦 Project Structure
-
+```bash
 cybersec-web-hub/
 ├── backend/
 │ ├── models/ # MongoDB models
@@ -63,6 +63,7 @@ cybersec-web-hub/
 ├── docker-compose.yml # Multi-container setup
 ├── .gitignore
 └── README.md
+```
 
 ## 🏃‍♂️ Quick Start
 
