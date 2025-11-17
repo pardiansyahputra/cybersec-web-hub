@@ -147,3 +147,4 @@ python -m http.server 8000
 -docker-compose logs mongodb
 
 ### 📝 License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for more details.
