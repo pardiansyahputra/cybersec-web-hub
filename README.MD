@@ -111,6 +111,7 @@ cd frontend
 python -m http.server 8000
 # Then open http://localhost:8000
 ````
+---
 
 ## 🌐 API Endpoints
 
@@ -123,6 +124,7 @@ python -m http.server 8000
 ### Health Check
 
 -GET /api/health - API status check
+---
 
 ## 🐳 Docker Services
 
@@ -145,6 +147,7 @@ python -m http.server 8000
 
 -docker-compose logs backend
 -docker-compose logs mongodb
+---
 
 ### 📝 License
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for more details.
+This project is licensed under the [MIT License](https://opensource.org/license/MIT). See the `LICENSE` file for more details.
