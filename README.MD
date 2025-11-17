@@ -51,8 +51,6 @@ A full-stack web application for sharing cybersecurity articles, tips, and tools
 ```bash
 cybersec-web-hub/
 ├── backend/
-│ ├── models/ # MongoDB models
-│ ├── routes/ # API routes
 │ ├── server.js # Main server file
 │ ├── package.json
 │ └── Dockerfile
